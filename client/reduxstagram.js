@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, IndexRoute, BrowserHistory } from 'react-router';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 import css from './styles/style.styl';
 
@@ -11,10 +11,10 @@ import Single from './components/Single';
 
 const router = (
   <Router history={browserHistory}>
-    <Router path="/" component={Main}>
-      <IndexRouter component={PhotoGrid}></IndexRouter>
-      <Router path="view/:postId" component={Single}></Router>
-    </Router>
+    <Route path="/" component={Main}>
+      <IndexRoute component={PhotoGrid}></IndexRoute>
+      <Route path="view/:postId" component={Single}></Route>
+    </Route>
   </Router>
 )
 
