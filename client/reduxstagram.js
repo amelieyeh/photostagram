@@ -12,6 +12,18 @@ import App from './components/App';
 import PhotoGrid from './components/PhotoGrid';
 import Single from './components/Single';
 
+// integrate with Sentry
+// import Raven from 'raven-js';
+// import { sentry_url } from './data/config';
+//
+// Raven.config(sentry_url, {
+//   tags: {
+//     git_commit: 'hahaha',
+//     userLevel: 'author'
+//   }
+// }).install();
+// console.log(window.user.doesNotExist);
+
 const router = (
   <Provider store={store}>
     <Router history={history}>
